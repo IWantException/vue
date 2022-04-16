@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>事件的基本使用</title>
+  <script src="../js/vue.js"></script>
+</head>
+<body>
+  <div id="root">
+    <h2>欢迎来到{{name}}学习</h2>
+    <button @click="showInfo1">点我提示信息1</button>
+    <button @click="showInfo2">点我提示信息2</button>
+  </div>
+</body>
+<script>
+  Vue.config.productionTip = false
+
+  new Vue({
+    el:'#root',
+    data:{
+      name:'尚硅谷'
+    },
+    methods:{
+      showInfo1(event){
+        alert('同学你好！')
+      },
+      showInfo2(event){
+        alert('同学你好！！')
+      }
+    }
+  })
+</script>
+</html>
